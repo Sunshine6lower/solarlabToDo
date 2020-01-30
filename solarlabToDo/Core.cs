@@ -4,8 +4,8 @@ namespace solarlabToDo
     {
         internal static void Init()
         {
-            
-
+            DB.InitDB();
+        
             UI.StartUI();
         }
     }
