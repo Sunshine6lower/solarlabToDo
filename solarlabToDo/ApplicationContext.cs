@@ -13,9 +13,8 @@ namespace solarlabToDo
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=todolistdb;Trusted_Connection=True;");
             optionsBuilder.UseNpgsql(
-            $"Host={DB.Host};Port={DB.Port};Database={DB.DatabaseName};Username={DB.Username};Password={DB.Password};SSL Mode=Require;Trust Server Certificate=true"); 
+            $"Host={DB.Host};Port={DB.Port};Database={DB.DatabaseName};Username={DB.Username};Password={DB.Password};SSL Mode=Prefer;Trust Server Certificate=true"); 
         }
     }
 }
