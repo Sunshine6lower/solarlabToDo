@@ -134,7 +134,12 @@ namespace solarlabToDo
 
         private static void Show(List<Task> tasks)
         {
-
+            if (tasks.Count == 0)
+            {
+                Console.WriteLine("Список пуст.");
+                return;
+            }
+            
             int idLength = (int)Math.Log10(tasks[tasks.Count - 1].Id) + 1;
             int nameLength = 8;
             int doneLength = 9;
