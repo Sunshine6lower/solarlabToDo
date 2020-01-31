@@ -164,9 +164,11 @@ namespace solarlabToDo
             {
                 char isD = t.IsDone ? done : notDone;
                 if (t.Deadline.CompareTo(DateTime.Now) < 0)
-                {
                     Console.ForegroundColor = ConsoleColor.Red;
-                }
+
+                if (t.IsDone)
+                    Console.ForegroundColor = ConsoleColor.Green;
+
                 Console.WriteLine("|{0, -" + idLength + "}|{1, -" + nameLength + "}|{2, -" + dateLength + "}|    {3}    |", t.Id, t.Name, t.Deadline.ToString("g"), isD);
                 Console.ResetColor();
             }
