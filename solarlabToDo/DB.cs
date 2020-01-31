@@ -1,7 +1,4 @@
 using System;
-using System.Linq;
-using System.Reflection.Metadata;
-using Microsoft.EntityFrameworkCore;
 
 namespace solarlabToDo
 {
@@ -60,9 +57,7 @@ namespace solarlabToDo
 
         private static string IsEmptyString(string String, string Default)
         {
-            if (string.IsNullOrWhiteSpace(String))
-                return Default;
-            return String;
+            return string.IsNullOrWhiteSpace(String) ? Default : String;
         }
 
         

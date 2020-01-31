@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace solarlabToDo
+﻿namespace solarlabToDo
 {
     class Program
     {
